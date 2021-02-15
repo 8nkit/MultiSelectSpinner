@@ -60,7 +60,7 @@ Click to see video of example:
 		singleSpinnerSearch.setSearchEnabled(true);
 
 		// A text that will display in search hint.
-		singleSpinnerSearch.setSearchHint("Select your mood");
+		singleSpinnerSearch.setSearchHint("Search");
 
 		// Removed second parameter, position. Its not required now..
 		// If you want to pass preselected items, you can do it while making listArray,
@@ -102,7 +102,7 @@ Click to see video of example:
 		multiSelectSpinnerWithSearch.setSearchEnabled(true);
 
 		// A text that will display in search hint.
-		multiSelectSpinnerWithSearch.setSearchHint("Select your mood");
+		multiSelectSpinnerWithSearch.setSearchHint("Search");
 
 		// Set text that will display when search result not found...
 		multiSelectSpinnerWithSearch.setEmptyTitle("Not Data Found!");

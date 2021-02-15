@@ -3,20 +3,20 @@ apply plugin: 'com.android.library'
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'MultiSelectSpinner'
-    publishedGroupId = 'com.inthecheesefactory.thecheeselibrary'
+    publishedGroupId = 'com.inthecheeserfactory.thecheeserlibrary'
     libraryName = 'MultiSelectSpinner'
     artifact = 'MultiSelectSpinner'
 
     libraryDescription = 'Its helpful to Select Multiple Values from Spinner list.'
 
-    siteUrl = 'https://github.com/pratikbutani/MultiSelectSpinner'
-    gitUrl = 'https://github.com/pratikbutani/MultiSelectSpinner'
+    siteUrl = 'https://github.com/8nkit/MultiSelectSpinner'
+    gitUrl = 'https://github.com/8nkit/MultiSelectSpinner'
 
     libraryVersion = '1.1'
 
-    developerId = 'pratikbutani'
-    developerName = 'Pratik Butani'
-    developerEmail = 'pratik13butani@gmail.com'
+    developerId = '8nkit'
+    developerName = 'Ankit Sharma'
+    developerEmail = 'ankitvashisht@hotmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'

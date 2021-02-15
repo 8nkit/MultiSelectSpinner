@@ -8,7 +8,9 @@ public class KeyPairBoolData {
 	
 	public KeyPairBoolData(String name, String isSelected){
 		this.name = name;
-		this.isSelected	= isSelected;
+		this.isSelected	= Boolean.parseBoolean(isSelected);
+	}
+	public KeyPairBoolData(){
 	}
 
 	public Object getObject() {

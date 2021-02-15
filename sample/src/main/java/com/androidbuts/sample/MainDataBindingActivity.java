@@ -8,7 +8,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidbuts.multispinnerfilter.KeyPairBoolData;
-import com.androidbuts.multispinnerfilter.SingleSpinnerListener;
 import com.androidbuts.sample.databinding.ActivityMainDataBindingBinding;
 
 import java.util.ArrayList;
@@ -48,34 +47,12 @@ public class MainDataBindingActivity extends AppCompatActivity {
         }
 
 
-        binding.colorSeparationCheckBox.setOnCheckedChangeListener((compoundButton, b) -> {
-            // Pass true, If you want color separation. Otherwise false. default = false.
-            binding.singleItemSelectionSpinner.setColorseparation(b);
-        });
 
-        binding.searchEditTextCheckBox.setOnCheckedChangeListener((compoundButton, b) -> {
-            // Pass true If you want searchView above the list. Otherwise false. default = true.
-            binding.singleItemSelectionSpinner.setSearchEnabled(b);
-        });
-
-        // A text that will display in search hint.
-        binding.singleItemSelectionSpinner.setSearchHint("Select your mood");
 
         // Removed second parameter, position. Its not required now..
         // If you want to pass preselected items, you can do it while making listArray,
         // pass true in setSelected of any item that you want to preselect
         // LOGICALLY, PASS Only One Item As SELECTED...
-        binding.singleItemSelectionSpinner.setItems(listArray0, new SingleSpinnerListener() {
-            @Override
-            public void onItemsSelected(KeyPairBoolData selectedItem) {
-                Log.i(TAG, "Selected Item : " + selectedItem.getName());
-            }
-
-            @Override
-            public void onClear() {
-                Toast.makeText(MainDataBindingActivity.this, "Cleared Selected Item", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         binding.colorSeparationMultipleCheckBox.setOnCheckedChangeListener((compoundButton, b) -> binding.multipleItemSelectionSpinner.setColorSeparation(b));
 
@@ -103,7 +80,7 @@ public class MainDataBindingActivity extends AppCompatActivity {
         binding.multipleItemSelectionSpinner.setClearText("Close & Clear");
 
         // A text that will display in search hint.
-        binding.multipleItemSelectionSpinner.setSearchHint("Select your mood");
+        binding.multipleItemSelectionSpinner.setSearchHint("Search");
 
         // Set text that will display when search result not found...
         binding.multipleItemSelectionSpinner.setEmptyTitle("Not Data Found!");

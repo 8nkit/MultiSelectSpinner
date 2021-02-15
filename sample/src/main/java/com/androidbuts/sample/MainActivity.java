@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidbuts.multispinnerfilter.KeyPairBoolData;
 import com.androidbuts.multispinnerfilter.MultiSpinnerSearch;
-import com.androidbuts.multispinnerfilter.SingleSpinnerListener;
-import com.androidbuts.multispinnerfilter.SingleSpinnerSearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +18,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 	private static final String TAG = "MainActivity";
 
-	SingleSpinnerSearch singleSpinnerSearch;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,36 +47,14 @@ public class MainActivity extends AppCompatActivity {
 		CheckBox colorSeparationCheckBox = findViewById(R.id.colorSeparationCheckBox);
 		CheckBox searchEditTextCheckBox = findViewById(R.id.searchEditTextCheckBox);
 
-		singleSpinnerSearch = findViewById(R.id.singleItemSelectionSpinner);
 
-		colorSeparationCheckBox.setOnCheckedChangeListener((compoundButton, b) -> {
-			// Pass true, If you want color separation. Otherwise false. default = false.
-			singleSpinnerSearch.setColorseparation(b);
-		});
 
-		searchEditTextCheckBox.setOnCheckedChangeListener((compoundButton, b) -> {
-			// Pass true If you want searchView above the list. Otherwise false. default = true.
-			singleSpinnerSearch.setSearchEnabled(b);
-		});
 
-		// A text that will display in search hint.
-		singleSpinnerSearch.setSearchHint("Select your mood");
 
 		// Removed second parameter, position. Its not required now..
 		// If you want to pass preselected items, you can do it while making listArray,
 		// pass true in setSelected of any item that you want to preselect
 		// LOGICALLY, PASS Only One Item As SELECTED...
-		singleSpinnerSearch.setItems(listArray0, new SingleSpinnerListener() {
-			@Override
-			public void onItemsSelected(KeyPairBoolData selectedItem) {
-				Log.i(TAG, "Selected Item : " + selectedItem.getName());
-			}
-
-			@Override
-			public void onClear() {
-				Toast.makeText(MainActivity.this, "Cleared Selected Item", Toast.LENGTH_SHORT).show();
-			}
-		});
 
 		MultiSpinnerSearch multiSelectSpinnerWithSearch = findViewById(R.id.multipleItemSelectionSpinner);
 
@@ -114,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 		multiSelectSpinnerWithSearch.setClearText("Close & Clear");
 
 		// A text that will display in search hint.
-		multiSelectSpinnerWithSearch.setSearchHint("Select your mood");
+		multiSelectSpinnerWithSearch.setSearchHint("Search");
 
 		// Set text that will display when search result not found...
 		multiSelectSpinnerWithSearch.setEmptyTitle("Not Data Found!");

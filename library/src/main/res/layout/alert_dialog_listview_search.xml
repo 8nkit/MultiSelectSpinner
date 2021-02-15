@@ -5,15 +5,15 @@
 	android:orientation="vertical">
 
 	<EditText
+		android:drawableLeft="@drawable/ic_baseline_filter_alt_24"
 		android:id="@+id/alertSearchEditText"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_margin="5dp"
-		android:autofillHints="@string/type_to_search"
-		android:background="@drawable/default_border"
-		android:hint="@string/type_to_search"
+		android:autofillHints="Search"
+		android:hint="Search"
 		android:inputType="text"
-		android:padding="5dp">
+		android:padding="15dp">
 
 		<requestFocus />
 	</EditText>

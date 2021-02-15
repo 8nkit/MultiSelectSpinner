@@ -8,41 +8,6 @@
     tools:context=".MainDataBindingActivity"
     android:padding="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Single Item Selection Spinner" />
-
-        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
-            android:id="@+id/singleItemSelectionSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:hintText="Single Selection Spinner" />
-
-        <CheckBox
-            android:id="@+id/colorSeparationCheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Color Separation in Row" />
-
-        <CheckBox
-            android:id="@+id/searchEditTextCheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:checked="true"
-            android:text="Search EditText" />
-
-    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -70,6 +35,7 @@
             app:hintText="Multi Item Selection" />
 
         <CheckBox
+            android:visibility="gone"
             android:id="@+id/selectAllButtonMultipleCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,6 +44,8 @@
             android:text="Select All Button" />
 
         <CheckBox
+            android:visibility="gone"
+
             android:id="@+id/colorSeparationMultipleCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,6 +53,8 @@
             android:text="Color Separation in Row" />
 
         <CheckBox
+            android:visibility="gone"
+
             android:id="@+id/searchEditTextMultipleCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,6 +63,8 @@
             android:text="Search EditText" />
 
         <CheckBox
+            android:visibility="gone"
+
             android:id="@+id/limitMultipleCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
